@@ -20,6 +20,6 @@ from blog import views as index_views
 
 
 urlpatterns = [
-    path('blog/', index_views.index, name='index'),
+    path('blog/', index_views.index, name='home'),
     path('admin/', admin.site.urls),
 ]
