@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 STATUS = ((0, "Draft"), (1, "Published"))
-APPROVED = ((0) (1))
 
 # Create your models here.
 class Post(models.Model):
@@ -28,7 +27,7 @@ class Comment(models.Model):
     related_name="commenter"
 )
     body = models.TextField()
-    approved = models.BooleanField(choices=APPROVED, default=0)
+    approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
     
 
