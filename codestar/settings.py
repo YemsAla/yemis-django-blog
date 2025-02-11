@@ -29,6 +29,7 @@ SECRET_KEY = 'django-insecure-4ruha0s!-htv6rv^r^6u5gsjb#s#l&#t4uc__nmbi$_z!39tew
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
+
 ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1', 'localhost', 'yemis-blog-app-72a414d76efe.herokuapp.com',]
 
 
