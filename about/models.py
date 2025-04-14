@@ -6,8 +6,10 @@ class About(models.Model):
     content = models.TextField()
     updated_on = models.DateTimeField(auto_now=True)
 
-
- class Meta:
+    class Meta:
         verbose_name = "About Page"
         verbose_name_plural = "About Pages"
         ordering = ["-updated_on"]
+
+    def __str__(self):
+        return self.title

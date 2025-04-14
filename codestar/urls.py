@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from about.views import my_about
+from about.views import about_page
 
 
 

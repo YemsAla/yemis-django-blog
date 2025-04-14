@@ -1,0 +1,16 @@
+{% load static %}
+
+{% url 'home' as home_url %}
+{% url 'about' as about_url %}
+
+<nav>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">About</a>
+          </li>  
+      <li><a href="{{ home_url }}">Home</a></li>
+      
+      <li><a href="{{ about_url }}">About</a></li>
+    </ul>
+  </nav>
+  
