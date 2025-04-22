@@ -9,7 +9,15 @@
         <div class="col-4 text-center">
             <img src="{% static 'images/nobody.jpg' %}" width="75%">
         </div>
-        <div class="col-8">
+        {% if about %}
+            <h2>{{ about.title }}</h2>
+            <div>{{ about.content|safe }}</div>
+        <p class="text-end"><em>Updated on: {{ about.updated_on|date:"jS F Y" }}</em></p>
+        {% else %}
+            <p>No About Me content available.</p>
+        {% endif %}
+
+        {% comment %} <div class="col-8">
             <!-- Title goes between these h2 tags -->
             <h2>{{ about.title }}</h2>
             <!-- Content goes directly underneath this -->
@@ -22,7 +30,7 @@
         <div class="col text-right">
             <!-- Updated on field goes in here -->
             <p class="text-end"><em>Updated on: {{ about.updated_on|date:"jS F Y" }}</em></p>
-        </div>
+        </div> {% endcomment %}
       </div>
 </div>
 {% endblock content %}

@@ -15,7 +15,8 @@ def about_page(request):
 
     :template:`about/about.html`
     """
-    about = About.objects.first()
+    about = About.objects.all().order_by('-updated_on').first()
+    
     return render(
         request,
         "about/about.html",
