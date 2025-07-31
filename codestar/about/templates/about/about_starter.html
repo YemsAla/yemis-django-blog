@@ -29,17 +29,17 @@
                 I'm excited to hear from you. Fill out the form
                 and we can get the ball rolling!</p>
 
+            <!-- add your form here. Your submit button should 
+                                have the classes of btn, btn-secondary -->
+            
 
-        
-            <form method="POST">
-                {% csrf_token %}
-                {{ collaborate_form |crispy }}
-                <button type="submit" class="btn btn-secondary mt-2">Submit</button>
-            </form>
-        </div>
-    </div>
-</div>
+    <form method="POST">
+    {% csrf_token %}
+    {{ collaborate_form|crispy }}
+    <button type="submit" class="btn btn-secondary">Submit</button>
+    </form>
 
+            
         </div>
     </div>
 </div>
