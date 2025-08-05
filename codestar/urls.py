@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from codestar.blog import views
+
 # from about.views import about_page
 
 
@@ -25,5 +27,8 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
-    path('', include("codestar.blog.urls"), name='blog-urls'),    
+    path('', include("codestar.blog.urls"), name='blog-urls'),
+    path('<slug:slug>/', views.post_detail, name='post_detail'),
+     path('<slug:slug>/edit_comment/<int:comment_id>',
+         views.comment_edit, name='comment_edit'),    
 ]
